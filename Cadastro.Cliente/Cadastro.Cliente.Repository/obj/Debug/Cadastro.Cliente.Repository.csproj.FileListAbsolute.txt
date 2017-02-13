@@ -1,0 +1,5 @@
+C:\Projetos\Cadastro.Cliente\Cadastro.Cliente\Cadastro.Cliente.Repository\bin\Debug\Cadastro.Cliente.Repository.dll
+C:\Projetos\Cadastro.Cliente\Cadastro.Cliente\Cadastro.Cliente.Repository\bin\Debug\Cadastro.Cliente.Repository.pdb
+C:\Projetos\Cadastro.Cliente\Cadastro.Cliente\Cadastro.Cliente.Repository\obj\Debug\Cadastro.Cliente.Repository.csprojResolveAssemblyReference.cache
+C:\Projetos\Cadastro.Cliente\Cadastro.Cliente\Cadastro.Cliente.Repository\obj\Debug\Cadastro.Cliente.Repository.dll
+C:\Projetos\Cadastro.Cliente\Cadastro.Cliente\Cadastro.Cliente.Repository\obj\Debug\Cadastro.Cliente.Repository.pdb

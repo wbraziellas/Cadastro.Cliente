@@ -1,0 +1,9 @@
+C:\Projetos\Cadastro.Cliente\Cadastro.Cliente\Cadastro.Cliente\bin\Debug\Cadastro.Cliente.exe.config
+C:\Projetos\Cadastro.Cliente\Cadastro.Cliente\Cadastro.Cliente\bin\Debug\Cadastro.Cliente.exe
+C:\Projetos\Cadastro.Cliente\Cadastro.Cliente\Cadastro.Cliente\bin\Debug\Cadastro.Cliente.pdb
+C:\Projetos\Cadastro.Cliente\Cadastro.Cliente\Cadastro.Cliente\obj\Debug\Cadastro.Cliente.csprojResolveAssemblyReference.cache
+C:\Projetos\Cadastro.Cliente\Cadastro.Cliente\Cadastro.Cliente\obj\Debug\Cadastro.Cliente.Form1.resources
+C:\Projetos\Cadastro.Cliente\Cadastro.Cliente\Cadastro.Cliente\obj\Debug\Cadastro.Cliente.Properties.Resources.resources
+C:\Projetos\Cadastro.Cliente\Cadastro.Cliente\Cadastro.Cliente\obj\Debug\Cadastro.Cliente.csproj.GenerateResource.Cache
+C:\Projetos\Cadastro.Cliente\Cadastro.Cliente\Cadastro.Cliente\obj\Debug\Cadastro.Cliente.exe
+C:\Projetos\Cadastro.Cliente\Cadastro.Cliente\Cadastro.Cliente\obj\Debug\Cadastro.Cliente.pdb

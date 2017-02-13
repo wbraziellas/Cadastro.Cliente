@@ -1,0 +1,8 @@
+C:\Projetos\Cadastro.Cliente\Cadastro.Cliente\Cadastro.Cliente.Teste\bin\Debug\Cadastro.Cliente.Teste.dll
+C:\Projetos\Cadastro.Cliente\Cadastro.Cliente\Cadastro.Cliente.Teste\bin\Debug\Cadastro.Cliente.Teste.pdb
+C:\Projetos\Cadastro.Cliente\Cadastro.Cliente\Cadastro.Cliente.Teste\bin\Debug\Cadastro.Cliente.Repository.dll
+C:\Projetos\Cadastro.Cliente\Cadastro.Cliente\Cadastro.Cliente.Teste\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+C:\Projetos\Cadastro.Cliente\Cadastro.Cliente\Cadastro.Cliente.Teste\bin\Debug\Cadastro.Cliente.Repository.pdb
+C:\Projetos\Cadastro.Cliente\Cadastro.Cliente\Cadastro.Cliente.Teste\obj\Debug\Cadastro.Cliente.Teste.csprojResolveAssemblyReference.cache
+C:\Projetos\Cadastro.Cliente\Cadastro.Cliente\Cadastro.Cliente.Teste\obj\Debug\Cadastro.Cliente.Teste.dll
+C:\Projetos\Cadastro.Cliente\Cadastro.Cliente\Cadastro.Cliente.Teste\obj\Debug\Cadastro.Cliente.Teste.pdb
