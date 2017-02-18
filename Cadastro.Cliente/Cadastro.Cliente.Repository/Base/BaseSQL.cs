@@ -6,23 +6,21 @@ using System.Threading.Tasks;
 using System.Data;
 using System.Data.Sql;
 using System.Data.SqlClient;
+using Cadastro.Cliente.Repository.Base.Escopo;
 
 namespace Cadastro.Cliente.Repository.Base
 {
-    public class BaseSQL
+    public abstract class BaseSQL : BaseEscopo
     {
-        string _strConn = @"Server=WILLIAM-PC\SQLEXPRESS;Database=Cli_Contro;Trusted_Connection=yes;";
-        SqlConnection _sqlConn;
-
-        public bool Conectar()
+        public override bool Conectar()
         {
-            _sqlConn = new SqlConnection(_strConn);
+            sqlConn = new SqlConnection(strConn);
 
             try
             {
-                if (ConnectionState.Closed == _sqlConn.State)
+                if (ConnectionState.Closed == sqlConn.State)
                 {
-                    _sqlConn.Open();
+                    sqlConn.Open();
                     return true;
                 }
                 else
@@ -35,21 +33,16 @@ namespace Cadastro.Cliente.Repository.Base
                 Desconectar();
                 throw eErro;
             }
-            finally
-            {
-                _sqlConn.Close();
-                _sqlConn.Dispose();
-            }
         }
 
-        public bool Desconectar()
+        public override bool Desconectar()
         {
             try
             {
-                if (_sqlConn.State != ConnectionState.Closed)
+                if (sqlConn.State != ConnectionState.Closed)
                 {
-                    _sqlConn.Close();
-                    _sqlConn.Dispose();
+                    sqlConn.Close();
+                    sqlConn.Dispose();
 
                     return true;
                 }

@@ -3,3 +3,5 @@ C:\Projetos\Cadastro.Cliente\Cadastro.Cliente\Cadastro.Cliente.Controller\bin\De
 C:\Projetos\Cadastro.Cliente\Cadastro.Cliente\Cadastro.Cliente.Controller\obj\Debug\Cadastro.Cliente.Controller.csprojResolveAssemblyReference.cache
 C:\Projetos\Cadastro.Cliente\Cadastro.Cliente\Cadastro.Cliente.Controller\obj\Debug\Cadastro.Cliente.Controller.dll
 C:\Projetos\Cadastro.Cliente\Cadastro.Cliente\Cadastro.Cliente.Controller\obj\Debug\Cadastro.Cliente.Controller.pdb
+C:\Projetos\Cadastro.Cliente\Cadastro.Cliente\Cadastro.Cliente.Controller\bin\Debug\Cadastro.Cliente.Repository.dll
+C:\Projetos\Cadastro.Cliente\Cadastro.Cliente\Cadastro.Cliente.Controller\bin\Debug\Cadastro.Cliente.Repository.pdb
