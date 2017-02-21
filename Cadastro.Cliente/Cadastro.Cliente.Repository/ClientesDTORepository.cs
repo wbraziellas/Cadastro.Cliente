@@ -20,7 +20,7 @@ namespace Cadastro.Cliente.Repository
                              "VALUES(@CODIGO, @NOME, @TELEFONE, @CGC, @RG, @DATACADASTRO)";
             #endregion
 
-            if (Conectar() == true)
+            if (Conectar())
             {
                 SqlCommand _sqlCmd = new SqlCommand(_strCmd, sqlConn);
 
@@ -39,18 +39,26 @@ namespace Cadastro.Cliente.Repository
         {
             #region Comando SQL Update
             string _strCmd = "UPDATE CLIENTES SET " +
-                                    "CODIGO = @CODIGO " +
-                                    "NOME = @NOME " +
-                                    "TELEFONE = @TELEFONE " +
-                                    "CGC = @CGC " +
-                                    "RG = @RG " +
+                                    "CODIGO = @CODIGO, " +
+                                    "NOME = @NOME, " +
+                                    "TELEFONE = @TELEFONE, " +
+                                    "CGC = @CGC, " +
+                                    "RG = @RG, " +
                                     "DATACADASTRO = @DATACADASTRO";
             #endregion
             try
             {
                 if(Conectar())
                 {
+                    SqlCommand _cmdSql = new SqlCommand(_strCmd, sqlConn);
+                    _cmdSql.Parameters.AddWithValue("@CODIGO", cliente.Codigo);
+                    _cmdSql.Parameters.AddWithValue("@NOME", cliente.Nome);
+                    _cmdSql.Parameters.AddWithValue("@TELEFONE", cliente.Telefone);
+                    _cmdSql.Parameters.AddWithValue("@CGC", cliente.Cgc);
+                    _cmdSql.Parameters.AddWithValue("@RG", cliente.Rg);
+                    _cmdSql.Parameters.AddWithValue("DATACADASTRO", cliente.DataCadastro);
 
+                    _cmdSql.ExecuteNonQuery();
                 }
             }
             catch(Exception eError)
@@ -60,7 +68,7 @@ namespace Cadastro.Cliente.Repository
         }
         public List<ClientesDTO> SelecionarClientes()
         {
-            string _strCmd = "SELECT * FROM CLIENTES";
+            string _strCmd = "SELECT * FROM CLIENTES WHERE CODIGO LIKE \"%A\" ";
             try
             {
                 if(Conectar())
@@ -77,7 +85,7 @@ namespace Cadastro.Cliente.Repository
             catch(Exception eError)
             {
                 Desconectar();
-                return new List<ClientesDTO>();
+                throw eError;
             }
 
             return new List<ClientesDTO>();
