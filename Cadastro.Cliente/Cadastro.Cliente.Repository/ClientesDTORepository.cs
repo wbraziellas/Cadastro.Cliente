@@ -24,7 +24,6 @@ namespace Cadastro.Cliente.Repository
             {
                 SqlCommand _sqlCmd = new SqlCommand(_strCmd, sqlConn);
 
-                _sqlCmd.Parameters.AddWithValue("@CODIGO", cliente.Codigo);
                 _sqlCmd.Parameters.AddWithValue("@NOME", cliente.Nome);
                 _sqlCmd.Parameters.AddWithValue("@TELEFONE", cliente.Telefone);
                 _sqlCmd.Parameters.AddWithValue("@CGC", cliente.Cgc);
@@ -51,7 +50,7 @@ namespace Cadastro.Cliente.Repository
                 if(Conectar())
                 {
                     SqlCommand _cmdSql = new SqlCommand(_strCmd, sqlConn);
-                    _cmdSql.Parameters.AddWithValue("@CODIGO", cliente.Codigo);
+
                     _cmdSql.Parameters.AddWithValue("@NOME", cliente.Nome);
                     _cmdSql.Parameters.AddWithValue("@TELEFONE", cliente.Telefone);
                     _cmdSql.Parameters.AddWithValue("@CGC", cliente.Cgc);
@@ -66,9 +65,17 @@ namespace Cadastro.Cliente.Repository
                 throw eError;
             }
         }
-        public List<ClientesDTO> SelecionarClientes()
+        public List<ClientesDTO> SelecionarClientes(string pesquisa)
         {
-            string _strCmd = "SELECT * FROM CLIENTES WHERE CODIGO LIKE \"%A\" ";
+            #region Comando SQL Selecionar Cliente
+            string _strCmd = "SELECT * FROM " +
+                                    "CLIENTES " +
+                              "WHERE " +
+                                    "CAST(ID AS VARCHAR(10)) LIKE '%" + pesquisa +"%' " +
+                              "OR UPPER(NOME) LIKE '%" + pesquisa + "%' " +
+                              "OR CGC LIKE '%" + pesquisa + "%'";
+
+            #endregion
             try
             {
                 if(Conectar())
@@ -103,7 +110,6 @@ namespace Cadastro.Cliente.Repository
                 var linha = row.ItemArray;
 
                 cliente.id = Convert.ToInt32(linha[0]);
-                cliente.Codigo = Convert.ToInt32(linha[1]);
                 cliente.Nome = linha[2].ToString();
                 cliente.Telefone = linha[3].ToString();
                 cliente.Cgc = linha[4].ToString();

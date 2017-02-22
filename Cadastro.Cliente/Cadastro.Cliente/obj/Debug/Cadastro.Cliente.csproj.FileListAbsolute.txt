@@ -2,7 +2,6 @@ C:\Projetos\Cadastro.Cliente\Cadastro.Cliente\Cadastro.Cliente\bin\Debug\Cadastr
 C:\Projetos\Cadastro.Cliente\Cadastro.Cliente\Cadastro.Cliente\bin\Debug\Cadastro.Cliente.exe
 C:\Projetos\Cadastro.Cliente\Cadastro.Cliente\Cadastro.Cliente\bin\Debug\Cadastro.Cliente.pdb
 C:\Projetos\Cadastro.Cliente\Cadastro.Cliente\Cadastro.Cliente\obj\Debug\Cadastro.Cliente.csprojResolveAssemblyReference.cache
-C:\Projetos\Cadastro.Cliente\Cadastro.Cliente\Cadastro.Cliente\obj\Debug\Cadastro.Cliente.Form1.resources
 C:\Projetos\Cadastro.Cliente\Cadastro.Cliente\Cadastro.Cliente\obj\Debug\Cadastro.Cliente.Properties.Resources.resources
 C:\Projetos\Cadastro.Cliente\Cadastro.Cliente\Cadastro.Cliente\obj\Debug\Cadastro.Cliente.csproj.GenerateResource.Cache
 C:\Projetos\Cadastro.Cliente\Cadastro.Cliente\Cadastro.Cliente\obj\Debug\Cadastro.Cliente.exe
@@ -48,3 +47,4 @@ C:\Projetos\Cadastro.Cliente\Cadastro.Cliente\Cadastro.Cliente\bin\Debug\es\DevE
 C:\Projetos\Cadastro.Cliente\Cadastro.Cliente\Cadastro.Cliente\bin\Debug\ja\DevExpress.Sparkline.v15.2.Core.resources.dll
 C:\Projetos\Cadastro.Cliente\Cadastro.Cliente\Cadastro.Cliente\bin\Debug\ru\DevExpress.Sparkline.v15.2.Core.resources.dll
 C:\Projetos\Cadastro.Cliente\Cadastro.Cliente\Cadastro.Cliente\obj\Debug\Cadastro.Cliente.exe.licenses
+C:\Projetos\Cadastro.Cliente\Cadastro.Cliente\Cadastro.Cliente\obj\Debug\Cadastro.Cliente.frmPrincipal.resources

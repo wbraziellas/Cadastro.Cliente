@@ -24,10 +24,9 @@ namespace Cadastro.Cliente.Tests
         {
             var cliente = new ClientesDTO()
             {
-                Codigo = 123,
-                Nome = "Dois",
+                Nome = "trÊs",
                 Cgc = "12312312387",
-                DataCadastro = Convert.ToDateTime("19/02/2017"),
+                DataCadastro = Convert.ToDateTime(DateTime.Now),
                 Telefone = "1231231890",
                 Rg = "12413241234"
             };

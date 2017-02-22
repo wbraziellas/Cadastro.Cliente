@@ -20,9 +20,9 @@ namespace Cadastro.Cliente.Controller
 
         #endregion
 
-        public List<ClientesDTO> RetornarClientes()
+        public List<ClientesDTO> RetornarClientes(string pesquisar)
         {
-            return clienteRepository.SelecionarClientes();
+            return clienteRepository.SelecionarClientes(pesquisar);
         }
 
     }
