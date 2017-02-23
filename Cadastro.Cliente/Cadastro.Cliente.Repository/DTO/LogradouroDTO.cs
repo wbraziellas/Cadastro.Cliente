@@ -8,7 +8,7 @@ namespace Cadastro.Cliente.Repository.DTO
 {
     public class LogradouroDTO
     {
-        public int codigo { get; set; }
+        public int id { get; set; }
         public int idCliente { get; set; }
         public string Logradouro { get; set; }
         public int Numero { get; set; }

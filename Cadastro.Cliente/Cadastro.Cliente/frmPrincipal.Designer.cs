@@ -37,6 +37,9 @@
             this.grdTelefone = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.grdCgc = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.txtPesquisa = new System.Windows.Forms.TextBox();
+            this.grdEndereco = new System.Windows.Forms.ListView();
+            this.grdLogradouroId = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.grdLogradouroNome = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
             // 
             // btnEditar
@@ -82,10 +85,11 @@
             this.gridClientes.FullRowSelect = true;
             this.gridClientes.Location = new System.Drawing.Point(12, 128);
             this.gridClientes.Name = "gridClientes";
-            this.gridClientes.Size = new System.Drawing.Size(903, 230);
+            this.gridClientes.Size = new System.Drawing.Size(921, 128);
             this.gridClientes.TabIndex = 3;
             this.gridClientes.UseCompatibleStateImageBehavior = false;
             this.gridClientes.View = System.Windows.Forms.View.Details;
+            this.gridClientes.ItemSelectionChanged += new System.Windows.Forms.ListViewItemSelectionChangedEventHandler(this.gridClientes_ItemSelectionChanged);
             // 
             // grdCodigo
             // 
@@ -115,15 +119,41 @@
             this.txtPesquisa.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPesquisa.Location = new System.Drawing.Point(410, 35);
             this.txtPesquisa.Name = "txtPesquisa";
-            this.txtPesquisa.Size = new System.Drawing.Size(458, 38);
+            this.txtPesquisa.Size = new System.Drawing.Size(476, 38);
             this.txtPesquisa.TabIndex = 4;
             this.txtPesquisa.TextChanged += new System.EventHandler(this.txtPesquisa_TextChanged);
+            // 
+            // grdEndereco
+            // 
+            this.grdEndereco.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.grdEndereco.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.grdLogradouroId,
+            this.grdLogradouroNome});
+            this.grdEndereco.FullRowSelect = true;
+            this.grdEndereco.Location = new System.Drawing.Point(12, 287);
+            this.grdEndereco.Name = "grdEndereco";
+            this.grdEndereco.Size = new System.Drawing.Size(921, 110);
+            this.grdEndereco.TabIndex = 5;
+            this.grdEndereco.UseCompatibleStateImageBehavior = false;
+            this.grdEndereco.View = System.Windows.Forms.View.Details;
+            // 
+            // grdLogradouroId
+            // 
+            this.grdLogradouroId.Text = "Id";
+            this.grdLogradouroId.Width = 100;
+            // 
+            // grdLogradouroNome
+            // 
+            this.grdLogradouroNome.Text = "Logradouro";
+            this.grdLogradouroNome.Width = 400;
             // 
             // frmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(927, 370);
+            this.ClientSize = new System.Drawing.Size(945, 409);
+            this.Controls.Add(this.grdEndereco);
             this.Controls.Add(this.txtPesquisa);
             this.Controls.Add(this.gridClientes);
             this.Controls.Add(this.btnDeletar);
@@ -148,6 +178,9 @@
         private System.Windows.Forms.ColumnHeader grdTelefone;
         private System.Windows.Forms.ColumnHeader grdCgc;
         private System.Windows.Forms.TextBox txtPesquisa;
+        private System.Windows.Forms.ListView grdEndereco;
+        private System.Windows.Forms.ColumnHeader grdLogradouroId;
+        private System.Windows.Forms.ColumnHeader grdLogradouroNome;
     }
 }
 

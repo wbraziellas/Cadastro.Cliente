@@ -17,6 +17,11 @@ namespace Cadastro.Cliente.Tests
             get { return _clienteRopository ?? (_clienteRopository = new ClientesDTORepository()); }
         }
 
+        private LougradouroDTORepository _logradouroRepository;
+        private LougradouroDTORepository logradouroRepository
+        {
+            get { return _logradouroRepository ?? (_logradouroRepository = new LougradouroDTORepository()); }
+        }
         #endregion
 
         [TestMethod]
@@ -37,9 +42,31 @@ namespace Cadastro.Cliente.Tests
         public void Testar_Retornar_Clientes()
         {
             var listaClientes = new List<ClientesDTO>();
-            listaClientes = clienteRepository.SelecionarClientes();
+            listaClientes = clienteRepository.SelecionarClientes("");
 
             Assert.IsNotNull(listaClientes, "Retornou Lista Nula");
         }
+
+        #region Testar Logradouro
+
+        [TestMethod]
+        public void Testar_Gravacao_Logradouro()
+        {
+            var logradouro = new LogradouroDTO()
+            {
+                idCliente = 2,
+                Logradouro = "rua teste",
+                Numero = 22,
+                Bairro = "bairro teste",
+                Cidade = "Teresópolis",
+                cep = 25955000,
+                Uf = "RJ"
+            };
+
+            logradouroRepository.InserirLogradouro(logradouro);
+        }
+
+        #endregion
+
     }
 }

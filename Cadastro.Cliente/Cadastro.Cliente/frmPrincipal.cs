@@ -54,5 +54,13 @@ namespace Cadastro.Cliente
         {
             CarregarGridClientes(txtPesquisa.Text);
         }
+
+        private void gridClientes_ItemSelectionChanged(object sender, ListViewItemSelectionChangedEventArgs e)
+        {
+            var item = gridClientes.Items[0].Focused = true;
+            var item1 = gridClientes.Items[0].Selected = true;
+
+
+        }
     }
 }
