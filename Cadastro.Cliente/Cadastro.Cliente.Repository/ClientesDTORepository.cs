@@ -16,8 +16,8 @@ namespace Cadastro.Cliente.Repository
         {
             #region Comando SQL Isert
             string _strCmd = "INSERT INTO CLIENTES " + 
-                                "(CODIGO, NOME, TELEFONE, CGC, RG, DATACADASTRO) " + 
-                             "VALUES(@CODIGO, @NOME, @TELEFONE, @CGC, @RG, @DATACADASTRO)";
+                                "(NOME, TELEFONE, CGC, RG, DATACADASTRO) " + 
+                             "VALUES(@NOME, @TELEFONE, @CGC, @RG, @DATACADASTRO)";
             #endregion
 
             if (Conectar())
@@ -97,6 +97,23 @@ namespace Cadastro.Cliente.Repository
 
             return new List<ClientesDTO>();
         }
+        public void DeletarCliente(int idCliente)
+        {
+            #region Comando SQL Isert
+            string _strCmd = "DELETE FROM CLIENTES " +
+                                "WHERE ID = @ID";
+            #endregion
+
+            if (Conectar())
+            {
+                SqlCommand _sqlCmd = new SqlCommand(_strCmd, sqlConn);
+
+                _sqlCmd.Parameters.AddWithValue("@ID", idCliente);
+
+                _sqlCmd.ExecuteNonQuery();
+
+            }
+        }
 
         #region Métodos Privados
 
@@ -110,11 +127,11 @@ namespace Cadastro.Cliente.Repository
                 var linha = row.ItemArray;
 
                 cliente.id = Convert.ToInt32(linha[0]);
-                cliente.Nome = linha[2].ToString();
-                cliente.Telefone = linha[3].ToString();
-                cliente.Cgc = linha[4].ToString();
-                cliente.Rg = linha[5].ToString();
-                cliente.DataCadastro = Convert.ToDateTime(linha[6]);
+                cliente.Nome = linha[1].ToString();
+                cliente.Telefone = linha[2].ToString();
+                cliente.Cgc = linha[3].ToString();
+                cliente.Rg = linha[4].ToString();
+                cliente.DataCadastro = Convert.ToDateTime(linha[5]);
 
                 listaClientes.Add(cliente);
             }

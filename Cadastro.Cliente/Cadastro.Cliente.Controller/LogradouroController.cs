@@ -24,5 +24,9 @@ namespace Cadastro.Cliente.Controller
         {
             return logradouroRepository.SelecionarLogradouro(idcliente);
         }
+        public void DeletarLogradouro(int idCliente)
+        {
+            logradouroRepository.DeletarLogradouro(idCliente);
+        }
     }
 }

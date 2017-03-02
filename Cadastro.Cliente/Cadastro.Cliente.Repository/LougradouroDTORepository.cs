@@ -16,7 +16,7 @@ namespace Cadastro.Cliente.Repository
         {
             #region SQL para selecionar o Logradouro
 
-            string _strSql = "SELECT * FROM LOGRADOURO WHERE IDPESSOA = @IDPESSOA";
+            string _strSql = "SELECT * FROM LOGRADOURO WHERE IDCLIENTE = @IDCLIENTE";
 
             #endregion
 
@@ -25,7 +25,7 @@ namespace Cadastro.Cliente.Repository
                 if(Conectar())
                 {
                     SqlCommand _cmdSql = new SqlCommand(_strSql, sqlConn);
-                    _cmdSql.Parameters.AddWithValue("@IDPESSOA", idcliente);
+                    _cmdSql.Parameters.AddWithValue("@IDCLIENTE", idcliente);
 
                     SqlDataAdapter adapter = new SqlDataAdapter() { SelectCommand = _cmdSql };
                     DataTable data = new DataTable();
@@ -108,7 +108,29 @@ namespace Cadastro.Cliente.Repository
                 throw eErro;
             }
         }
+        public void DeletarLogradouro(int idCliente)
+        {
+            #region SQL para alterar o logradouro
 
+            string _strSql = "DELETE FROM LOGRADOURO WHERE IDCLIENTE = @IDCLIENTE";
+
+            #endregion
+
+            try
+            {
+                if (Conectar())
+                {
+                    SqlCommand _cmdSql = new SqlCommand(_strSql, sqlConn);
+                    _cmdSql.Parameters.AddWithValue("@IDCLIENTE", idCliente);
+                    _cmdSql.ExecuteNonQuery();
+                }
+            }
+            catch (Exception eErro)
+            {
+                throw eErro;
+            }
+        }
+    
         #region Métodos Privados
 
         private List<LogradouroDTO> ConverterDataEmLogradouro(DataTable data)

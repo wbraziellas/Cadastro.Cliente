@@ -40,6 +40,8 @@
             this.grdEndereco = new System.Windows.Forms.ListView();
             this.grdLogradouroId = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.grdLogradouroNome = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.grdLogradouroNumero = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.grdLogradouroUf = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
             // 
             // btnEditar
@@ -71,6 +73,7 @@
             this.btnDeletar.TabIndex = 2;
             this.btnDeletar.Text = "Deletar";
             this.btnDeletar.UseVisualStyleBackColor = true;
+            this.btnDeletar.Click += new System.EventHandler(this.btnDeletar_Click);
             // 
             // gridClientes
             // 
@@ -129,7 +132,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.grdEndereco.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.grdLogradouroId,
-            this.grdLogradouroNome});
+            this.grdLogradouroNome,
+            this.grdLogradouroNumero,
+            this.grdLogradouroUf});
             this.grdEndereco.FullRowSelect = true;
             this.grdEndereco.Location = new System.Drawing.Point(12, 287);
             this.grdEndereco.Name = "grdEndereco";
@@ -147,6 +152,14 @@
             // 
             this.grdLogradouroNome.Text = "Logradouro";
             this.grdLogradouroNome.Width = 400;
+            // 
+            // grdLogradouroNumero
+            // 
+            this.grdLogradouroNumero.Text = "Número";
+            // 
+            // grdLogradouroUf
+            // 
+            this.grdLogradouroUf.Text = "UF";
             // 
             // frmPrincipal
             // 
@@ -181,6 +194,8 @@
         private System.Windows.Forms.ListView grdEndereco;
         private System.Windows.Forms.ColumnHeader grdLogradouroId;
         private System.Windows.Forms.ColumnHeader grdLogradouroNome;
+        private System.Windows.Forms.ColumnHeader grdLogradouroNumero;
+        private System.Windows.Forms.ColumnHeader grdLogradouroUf;
     }
 }
 

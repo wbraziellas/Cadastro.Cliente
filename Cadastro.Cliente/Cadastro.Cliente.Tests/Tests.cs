@@ -29,7 +29,7 @@ namespace Cadastro.Cliente.Tests
         {
             var cliente = new ClientesDTO()
             {
-                Nome = "trÊs",
+                Nome = "Três",
                 Cgc = "12312312387",
                 DataCadastro = Convert.ToDateTime(DateTime.Now),
                 Telefone = "1231231890",
@@ -54,10 +54,10 @@ namespace Cadastro.Cliente.Tests
         {
             var logradouro = new LogradouroDTO()
             {
-                idCliente = 2,
-                Logradouro = "rua teste",
-                Numero = 22,
-                Bairro = "bairro teste",
+                idCliente = 1004,
+                Logradouro = "rua teste 5",
+                Numero = 23,
+                Bairro = "bairro teste 5",
                 Cidade = "Teresópolis",
                 cep = 25955000,
                 Uf = "RJ"

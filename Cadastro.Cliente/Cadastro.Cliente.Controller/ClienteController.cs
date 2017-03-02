@@ -24,6 +24,10 @@ namespace Cadastro.Cliente.Controller
         {
             return clienteRepository.SelecionarClientes(pesquisar);
         }
+        public void DeletarCliente(int idCliente)
+        {
+            clienteRepository.DeletarCliente(idCliente);
+        }
 
     }
 }
